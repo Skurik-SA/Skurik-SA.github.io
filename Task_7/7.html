@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Game</title>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.js"
+    ></script>
+    <script src="./JS/script.js"></script>
+    <script src="./JS/classes.js"></script>
+    <script src="./JS/subFunc.js"></script>
+    <script src="./JS/menu.js"></script>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+
+  <body onload="new_session();">
+    <div id="wrapper">
+      <div id="game" class="main">
+        <canvas
+          id="canvas"
+          width="900"
+          height="600"
+          onclick="shoot();"
+          ondblclick="SuperSkill();"
+          onmousemove="rotate(event)"
+        >
+        </canvas>
+      </div>
+
+      <div id="info" class="main">
+        <table>
+          <tr>
+            <td>
+              <div id="top" align="center"></div>
+            </td>
+            <td>
+              <div id="rules" align="center">
+                <span><h2>Правила</h2></span>
+                <p>
+                  1)У тебя 5 жизней. За каждого пропущенного врага -1 жизнь.
+                  Потеря всех сердец - конец игры.<br />
+                  2)В игре есть 4 типа врагов. У каждого своя скорость и
+                  количество очков за уничтожение.<br />
+                  3)Скорость врагов и их количество увеличивается каждые 500
+                  очков. <br />
+                  4)Двойной клик - уничтожение всех врагов за 500 очков.<br />
+                  5)Перезарядка пушки 0.1 с.
+                  <br />
+                  6)Для уничтожения врага, нужно целиться в их ядро, оно
+                  находится в самом центре
+                  <br />
+                  Удачной игры!
+                  <br />
+                  P.S. Чтобы вернуться к игре, нажмите еще раз на кнопку
+                  "Правила и статистика"
+                </p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="btns">
+        <button type="button" id="btn1" class="btn" onclick="change_status();">
+          Пуск/Пауза
+        </button>
+        <button type="button" id="btn2" class="btn" onclick="init();">
+          Перезапуск
+        </button>
+        <button type="button" id="btn3" class="btn" onclick="new_session();">
+          Сменить имя
+        </button>
+        <button type="button" id="btn4" class="btn" onclick="change_section();">
+          Правила и статистика
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
