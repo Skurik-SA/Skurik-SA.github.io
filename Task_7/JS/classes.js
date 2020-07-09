@@ -11,8 +11,8 @@ Gun = new Class({
         ctx.beginPath();
         ctx.arc(0, 0, 35, 2 * Math.PI, Math.PI, false);
         ctx.moveTo(15 - 50, 0);
-        ctx.lineTo(40 - 50, 0 - 100);
-        ctx.lineTo(70 - 50, 0 - 100);
+        ctx.lineTo(40 - 50, 0 - 120);
+        ctx.lineTo(70 - 50, 0 - 120);
         ctx.lineTo(85 - 50, 0);
         ctx.lineTo(15 - 50, 0);
         ctx.closePath();
